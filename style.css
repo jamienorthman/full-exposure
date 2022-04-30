@@ -1,3 +1,7 @@
+body {
+  background-color: #AAC6C1;
+}
+
 .tooltip {
   position: relative;
   display: block;
@@ -27,12 +31,25 @@ div {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
-.word {
+
+.tooltip {
   font-family: sans-serif;
+  display: inline;
+  margin: 40px 20px 40px 20px;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.subtitle {
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .about {
   text-align: right;
+  margin: 40px;
 }
 
 .message {
@@ -52,4 +69,41 @@ div {
 
 button:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+  .title {
+      font-size: 4em;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+      font-size: 3em;
+  }
+}
+
+@media (max-width: 1600px) {
+  .message-head {
+      font-size: 4em;
+  }
+}
+
+@media (max-width: 576px) {
+  .message-head {
+      font-size: 3em;
+  }
+}
+
+
+@media (max-width: 1600px) {
+  .what-is-this {
+      font-size: 4em;
+  }
+}
+
+@media (max-width: 576px) {
+  .what-is-this {
+      font-size: 3em;
+  }
 }
