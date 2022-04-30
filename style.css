@@ -30,3 +30,26 @@ div {
 .word {
   font-family: sans-serif;
 }
+
+.about {
+  text-align: right;
+}
+
+.message {
+  text-align: right;
+}
+
+.share {
+  border: 2px solid magenta;
+  border-radius: 30px;
+}
+
+.mail {
+  border: 2px solid orange;
+  border-radius: 30px;
+  background-color: yellow;
+}
+
+button:hover {
+  cursor: pointer;
+}
