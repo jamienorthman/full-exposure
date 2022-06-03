@@ -49,12 +49,46 @@ function appendWidl(word, reason, styleCSS, link) {
     containerDiv.appendChild(widlDiv)
 }
 
-appendWidl("utilize", "use!", "color:red")
+appendWidl("Utilize", "use!", "color:red")
 
-appendWidl("juxtapose", "compare and contrast?", "font-weight:bold")
+appendWidl("Juxtapose", "compare and contrast?", "font-weight:bold")
 
 appendWidl("Bulk collection", "mass surveillance", "", "https://www.deutschlandfunk.de/dlf-interview-with-edward-snowden-what-would-a-society-be-100.html")
 
 appendWidl("conjouring", "produce or evoke", "color:gold; font-size:200%;")
 
+appendWidl("Meandering", "weaving or move through?", "font-style:italic")
 
+appendWidl("extraordinary rendition", "kidnapping")
+
+appendWidl("enhanced interrogation", "torture", "font-weight:bold")
+
+appendWidl("vignettes", "snapshots?", "font-style:italic")
+
+appendWidl("methodologies", "methods")
+
+appendWidl("intermediaries", "mediator")
+
+appendWidl("individuating", "-__-", "font-weight:bold")
+
+appendWidl("Footfall measurement", "location tracking", "", "https://vimeo.com/425137575")
+
+appendWidl("Psychographic breakdown", "personality labeling", "", "https://vimeo.com/425137575")
+
+appendWidl("focalize", "just say focus", "font-weight:bold")
+
+appendWidl("collateral damage", "massive civilian destruction during war")
+
+appendWidl("Change management", "can really manage change?!", "font-style:italic")
+
+appendWidl("Sustainability", "long-term practices—nowadays used to gain profits", "font-size:200%; color:green;")
+
+appendWidl("trajectory", "path")
+
+appendWidl("casualties", "deaths", "font-size:200%; color:purple; font-style:italic")
+
+appendWidl("inflection point", "turning point/milestone", "font-style:italic")
+
+appendWidl("counterintelligence", "defense against spying", "font-weight:bold;")
+
+appendWidl("outsourcing", "whoever does it cheapest gets the job", "font-size:150%")
