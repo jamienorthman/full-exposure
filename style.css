@@ -71,6 +71,10 @@ button:hover {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (max-width: 1600px) {
   .title {
       font-size: 4em;
