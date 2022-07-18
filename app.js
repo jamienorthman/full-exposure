@@ -96,3 +96,5 @@ appendWidl("outsourcing", "whoever does it cheapest gets the job", "font-size:15
 appendWidl("Posthuman", "evolution")
 
 appendWidl("useless", "no need to be useful", "font-weight:bold;")
+
+appendWidl("Apropos", "relevant", "font-style:italic; color:blue;")
