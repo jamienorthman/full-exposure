@@ -67,7 +67,7 @@ appendWidl("vignettes", "snapshots?", "font-style:italic")
 
 appendWidl("methodologies", "methods")
 
-appendWidl("intermediaries", "mediator")
+appendWidl("intermediaries", "mediator", "color:green")
 
 appendWidl("individuating", "-__-", "font-weight:bold")
 
@@ -77,9 +77,9 @@ appendWidl("Psychographic breakdown", "personality labeling", "", "https://vimeo
 
 appendWidl("focalize", "just say focus", "font-weight:bold")
 
-appendWidl("collateral damage", "massive civilian destruction during war")
+appendWidl("collateral damage", "massive civilian destruction during war", "color:blue")
 
-appendWidl("Change management", "can really manage change?!", "font-style:italic")
+appendWidl("Change-management", "can really manage change?!", "font-style:italic")
 
 appendWidl("Sustainability", "long-term practices—nowadays used to gain profits", "font-size:200%; color:green;")
 
@@ -98,3 +98,7 @@ appendWidl("Posthuman", "evolution")
 appendWidl("useless", "no need to be useful", "font-weight:bold;")
 
 appendWidl("Apropos", "relevant", "font-style:italic; color:blue;")
+
+appendWidl("social distancing", "physical distancing", "font-weight:bold; color:red;")
+
+appendWidl("front line", "military line closest to enemy or influential position in a debate", "color:gold; text-stroke:1px black; font-size:150%;")

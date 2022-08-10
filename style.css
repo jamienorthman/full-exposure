@@ -2,6 +2,16 @@ body {
   background-color: #AAC6C1;
 }
 
+div {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+#word-container {
+  margin: 0 40px;
+}
+
 .tooltip {
   position: relative;
   display: block;
@@ -26,16 +36,10 @@ body {
   visibility: visible;
 }
 
-div {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-}
-
 .tooltip {
   font-family: sans-serif;
-  display: inline;
-  margin: 40px 20px 40px 20px;
+  display: inline-block;
+  padding: 40px 20px 40px 20px;
 }
 
 .title {
