@@ -1,7 +1,7 @@
 
 //later: use JSON to define the words list
 
-let wordList = [
+let wordList = [ // the big list of words (euphemisms).
     {
         word: "extraordinary rendition",
         reason: "kidnapping",
@@ -83,7 +83,7 @@ let wordList = [
         word: "Pushback",
         reason: "forcing refugees or migrants back over a border",
         styleCSS: "font-weight: bold",
-        tags: ["geopolitical", "immigration"],
+        tags: ["geopolitical", "migration"],
         link: ""
     },
     {
@@ -104,7 +104,7 @@ let wordList = [
         word: "ethnic cleansing",
         reason: "forced ethnic homogeny",
         styleCSS: "font-weight: bold",
-        tags: ["racism", "genocide"],
+        tags: ["racism", "migration", "genocide"],
         link: ""
     },
 ];
@@ -117,11 +117,11 @@ console.log("CREATING ELEMENTS!")
 function appendWidl(wordListEntry) {
     let containerDiv = document.getElementById("word-container");
 
-    let widlDiv = document.createElement("div");
-    widlDiv.classList.add("tooltip");
+    let widlDiv = document.createElement("div"); // HTML element: these divs hold each word (euphemism). It contains two things: wordElement and toolTipSpan.
+    widlDiv.classList.add("tooltip"); // tooltip class is added from style.css file
 
-    let wordElement;
-    if (wordListEntry.link) {
+    let wordElement; // the HTML elements representing the characteristics of the wordListEntries.
+    if (wordListEntry.link) { // wordListEntry refers to the actual contents of wordList (the objects inside array wordList).
         wordElement = document.createElement("a");
         wordElement.href = wordListEntry.link;
         wordElement.target = "_blank"
@@ -129,45 +129,45 @@ function appendWidl(wordListEntry) {
         wordElement = document.createElement("span");
     }
     wordElement.style = wordListEntry.styleCSS;
-    let toolTipSpan = document.createElement("span");
+    let toolTipSpan = document.createElement("span"); // toolTipSpan created to see tooltip in the HTML.
 
-    toolTipSpan.classList.add("tooltiptext");
+    toolTipSpan.classList.add("tooltiptext"); // class 'tooltiptext' is added from style.css file.
 
-    widlDiv.appendChild(wordElement);
+    widlDiv.appendChild(wordElement); // attaches wordElement
     widlDiv.appendChild(toolTipSpan);
 
     wordElement.innerText = wordListEntry.word;
     toolTipSpan.innerText = wordListEntry.reason;
 
-    wordListEntry.wordElementHTML = wordElement; 
-
     containerDiv.appendChild(widlDiv)
+    // Now all the HTML for this word has been created.
+    // In addition, store a reference for each word element in the JS wordList so that we 
+    // can access each word's HTML whenever we need it: (For example, in addEventListener.)
+    wordListEntry.wordElementHTML = wordElement; 
+}
+    // creates the HTML divs and attaches a reference to each word's html element 
+    // to the word list entries. It calls the appendWidl function above.
+for (let i = 0; i < wordList.length; i++) {
+    appendWidl(wordList[i]); 
 }
 
 for (let i = 0; i < wordList.length; i++) {
     let wordListEntry = wordList[i];
-    // creates the HTML divs and attached a reference to each word's html element to the word list entries
-    appendWidl(wordListEntry);
-}
-
-for (let i = 0; i < wordList.length; i++) {
-    let wordListEntry = wordList[i];
-    let relatedWords = [];
+    let relatedWords = []; // initializes the variable. to be filled up later.
     // For each tag of this word...
     for (let j = 0; j < wordListEntry.tags.length; j++) {
         let wordTag = wordListEntry.tags[j];
         // ...search all other words...
         for (let k = 0; k < wordList.length; k++) {
             let otherWordListEntry = wordList[k];
-            // ...to compare their tags with the given tag of this word.
-            // ** Could use array.includes() in the future **
+            // ...to compare their tags with the given tag of this word:
             for (let l = 0; l < otherWordListEntry.tags.length; l++) {
                 let otherWordTag = otherWordListEntry.tags[l];
                 // If the words are sharing at least 1 tag we consider them related
                 if (wordTag === otherWordTag) {
                     relatedWords.push(otherWordListEntry);
                     break;
-                }
+                } // ** Could use array.includes() in the future ? **
             }
         }          
     }
@@ -175,12 +175,16 @@ for (let i = 0; i < wordList.length; i++) {
     // Highlight Event:
     wordHtml.addEventListener("mouseover", (event) => {
         for (let j = 0; j < relatedWords.length; j++) {
+            // this is why we needed to store wordElementHTML. 
+            // Because here we're manipulating DOM.
             relatedWords[j].wordElementHTML.style.color = 'limeGreen';
         }
     });
     // Unhighlight Event:
     wordHtml.addEventListener("mouseout", (event) => {
         for (let j = 0; j < relatedWords.length; j++) {
+            // this is why we needed to store wordElementHTML. 
+            //Because here we're manipulating DOM.
             relatedWords[j].wordElementHTML.style.color = 'rgb(187, 175, 175)';
         }
     });
