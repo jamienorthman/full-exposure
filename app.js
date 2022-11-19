@@ -107,6 +107,34 @@ let wordList = [ // the big list of words (euphemisms).
         tags: ["racism", "migration", "genocide"],
         link: ""
     },
+    {
+        word: "over the hill",
+        reason: "old",
+        styleCSS: "font-weight: bold",
+        tags: ["social", "slang" ],
+        link: ""
+    },
+    {
+        word: "hook-up",
+        reason: "have sex",
+        styleCSS: "font-weight: bold",
+        tags: ["social", "slang"],
+        link: ""
+    },
+    {
+        word: "put down",
+        reason: "euthanize (an animal)",
+        styleCSS: "font-weight: bold",
+        tags: ["social", "politeness"],
+        link: ""
+    },
+    {
+        word: "without right to correspondence",
+        reason: "immediately sentenced to death",
+        styleCSS: "font-weight: bold",
+        tags: ["war", "political"],
+        link: "https://jsis.washington.edu/wordpress/wp-content/uploads/2018/02/USSR_Stalin_Great_Purge.pdf"
+    },
 ];
 
 
@@ -122,11 +150,11 @@ function appendWidl(wordListEntry) {
 
     let wordElement; // the HTML elements representing the characteristics of the wordListEntries.
     if (wordListEntry.link) { // wordListEntry refers to the actual contents of wordList (the objects inside array wordList).
-        wordElement = document.createElement("a");
-        wordElement.href = wordListEntry.link;
-        wordElement.target = "_blank"
+        wordElement = document.createElement("a"); // creates a link element for wordElement...
+        wordElement.href = wordListEntry.link; // ...attaches the link element to wordListEntry
+        wordElement.target = "_blank" 
     } else {
-        wordElement = document.createElement("span");
+        wordElement = document.createElement("span"); // one of the spans with no link inside the WidlDiv
     }
     wordElement.style = wordListEntry.styleCSS;
     let toolTipSpan = document.createElement("span"); // toolTipSpan created to see tooltip in the HTML.
@@ -134,10 +162,10 @@ function appendWidl(wordListEntry) {
     toolTipSpan.classList.add("tooltiptext"); // class 'tooltiptext' is added from style.css file.
 
     widlDiv.appendChild(wordElement); // attaches wordElement
-    widlDiv.appendChild(toolTipSpan);
+    widlDiv.appendChild(toolTipSpan); // attaches toolTipSpan
 
-    wordElement.innerText = wordListEntry.word;
-    toolTipSpan.innerText = wordListEntry.reason;
+    wordElement.innerText = wordListEntry.word; // now the euphemism will be displayed.
+    toolTipSpan.innerText = wordListEntry.reason; // and the tooltip feature containing the translation of the euphemism.
 
     containerDiv.appendChild(widlDiv)
     // Now all the HTML for this word has been created.
@@ -145,15 +173,15 @@ function appendWidl(wordListEntry) {
     // can access each word's HTML whenever we need it: (For example, in addEventListener.)
     wordListEntry.wordElementHTML = wordElement; 
 }
-    // creates the HTML divs and attaches a reference to each word's html element 
-    // to the word list entries. It calls the appendWidl function above.
+// This loop creates the HTML divs and attaches a reference to each word's html element 
+// to the word list entries. It calls the appendWidl function above.
 for (let i = 0; i < wordList.length; i++) {
     appendWidl(wordList[i]); 
 }
-
+// Next loop goes through each wordListEntry of the wordList...
 for (let i = 0; i < wordList.length; i++) {
     let wordListEntry = wordList[i];
-    let relatedWords = []; // initializes the variable. to be filled up later.
+    let relatedWords = []; // ...initializes the variable. to be filled up later.
     // For each tag of this word...
     for (let j = 0; j < wordListEntry.tags.length; j++) {
         let wordTag = wordListEntry.tags[j];
@@ -163,7 +191,7 @@ for (let i = 0; i < wordList.length; i++) {
             // ...to compare their tags with the given tag of this word:
             for (let l = 0; l < otherWordListEntry.tags.length; l++) {
                 let otherWordTag = otherWordListEntry.tags[l];
-                // If the words are sharing at least 1 tag we consider them related
+                // If the words are sharing at least 1 tag we consider them related.
                 if (wordTag === otherWordTag) {
                     relatedWords.push(otherWordListEntry);
                     break;
