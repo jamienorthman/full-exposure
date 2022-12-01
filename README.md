@@ -7,4 +7,4 @@ Hosted [here](https://jamienorthman.github.io/wordsidontlike/)
 <br>
 [![Hippocratic License HL3-FULL](https://img.shields.io/static/v1?label=Hippocratic%20License&message=HL3-FULL&labelColor=5e2751&color=bc8c3d)](https://firstdonoharm.dev/version/3/0/full.html)
 <br>
-It is also hosted under the Hippocratic License Version 3.0.
+It is also licensed under the Hippocratic License Version 3.0.
