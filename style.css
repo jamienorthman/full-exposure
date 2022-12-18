@@ -53,12 +53,17 @@ div {
 }
 
 .about {
+  display: inline-block;
   text-align: right;
   margin: 40px;
+  width: 200px;
 }
 
 .message {
-  text-align: right;
+  display: inline-block;
+  text-align: left;
+  margin: 40px;
+  width: 200px;
 }
 
 .share {
