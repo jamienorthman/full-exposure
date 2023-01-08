@@ -50,6 +50,7 @@ div {
 
 .subtitle {
   font-family: 'Courier New', Courier, monospace;
+  color: purple;
 }
 
 .about {
@@ -58,6 +59,10 @@ div {
   margin: 40px;
   width: 200px;
 }
+
+.about a {
+  text-decoration: none;
+ }
 
 .message {
   display: inline-block;

@@ -139,7 +139,7 @@ let wordList = [ // the big list of words (euphemisms).
         word: "False positives",
         reason: "structural assassination of civilians by military to inflate body counts",
         styleCSS: "font-weight: bold",
-        tags: ["war", "political"],
+        tags: ["violence", "political"],
         link: "https://www.hrw.org/es/news/2017/11/11/los-incentivos-perversos-detras-de-los-falsos-positivos"
     },
 ];
