@@ -13,6 +13,11 @@ div {
   margin: 0 40px;
 }
 
+.container {
+  max-width: 400px;
+  display: inline;
+}
+
 .tooltip {
   position: relative;
   display: block;
