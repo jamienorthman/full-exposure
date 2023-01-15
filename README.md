@@ -1,4 +1,4 @@
-# wordsidontlike
+# full exposure
 A translator for euphemisms. The project is an internet art project where people can not only submit euphemisms and translations, but also find connections between words and connect with each other.
 
 Hosted [here](https://jamienorthman.github.io/wordsidontlike/)
