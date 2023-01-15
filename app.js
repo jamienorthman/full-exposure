@@ -132,15 +132,53 @@ let wordList = [ // the big list of words (euphemisms).
         word: "without right to correspondence",
         reason: "immediately sentenced to death",
         styleCSS: "font-weight: bold",
-        tags: ["war", "political"],
+        tags: ["murder", "war", "political"],
         link: "https://jsis.washington.edu/wordpress/wp-content/uploads/2018/02/USSR_Stalin_Great_Purge.pdf"
     },
     {
-        word: "False positives",
+        word: "Falsos positivos (False positives)",
         reason: "structural assassination of civilians by military to inflate body counts",
         styleCSS: "font-weight: bold",
         tags: ["violence", "political"],
         link: "https://www.hrw.org/es/news/2017/11/11/los-incentivos-perversos-detras-de-los-falsos-positivos"
+    },
+    {
+        word: "Sozialtourismus (Social tourism)",
+        reason: "Flight of Ukrainians",
+        styleCSS: "font-weight: bold",
+        tags: ["migration", "political"],
+        link: "https://www.tagesschau.de/inland/merz-ukraine-fluechtlinge-deutschland-101.html"
+    },
+    {
+        word: "Sondervermögen (Special assets)",
+        reason: "debt",
+        styleCSS: "font-weight: bold",
+        tags: ["political", "finance"],
+        link: "https://www.tagesschau.de/wirtschaft/finanzen/staatshaushalt-sondervermoegen-101.html"
+    },
+    {
+        word: "konsolidieren (consolidate)",
+        reason: "nothing done yet",
+        styleCSS: "font-weight: bold",
+        tags: ["political", "mass media"],
+    },
+    {
+        word: "Reichskristallnacht (Crystal Night)",
+        reason: "November Progroms 1938",
+        styleCSS: "font-weight: bold",
+        tags: ["violence", "racism", "discrimination"],
+    },
+    {
+        word: "sozial swach (socially weak)",
+        reason: "poor, little school education",
+        styleCSS: "font-weight: bold",
+        tags: ["mass media", "discrimination"],
+    },
+    {
+        word: "the Final Solution",
+        reason: "mass murder of European Jews by Nazi Germany",
+        styleCSS: "font-weight: bold",
+        tags: ["murder", "discrimination", "racism"], 
     },
 ];
 
