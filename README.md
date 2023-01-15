@@ -1,5 +1,5 @@
 # wordsidontlike
-A translator for euphemisms. The project is an internet art piece where people can not only submit euphemisms and translations, but also find connections between words and connect with each other.  The idea is that if people talk about euphemisms, some of which they might be using regularly and even subconsciously, they will be encouraged to think more critically about language.
+A translator for euphemisms. The project is an internet art project where people can not only submit euphemisms and translations, but also find connections between words and connect with each other.
 
 Hosted [here](https://jamienorthman.github.io/wordsidontlike/)
 
