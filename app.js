@@ -192,6 +192,18 @@ let wordList = [ // the big list of words (euphemisms).
         styleCSS: "font-weight: bold",
         tags: ["discrimination", "racism"], 
         link: "https://www.law.cornell.edu/wex/separate_but_equal#:~:text=%E2%80%9CSeparate%20but%20equal%E2%80%9D%20refers%20to,by%20states%20and%20local%20governments."
+    },
+    {
+        word: "liquidation",
+        reason: "clearing out, killing, or disposing of",
+        styleCSS: "font-weight: bold",
+        tags: ["mass media", "murder"],
+    },
+    {
+        word: "let go",
+        reason: "fire someone",
+        styleCSS: "font-weight: bold",
+        tags: ["social", "politeness"],
     }
 ];
 
