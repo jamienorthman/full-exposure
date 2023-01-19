@@ -13,7 +13,7 @@ let wordList = [ // the big list of words (euphemisms).
         word: "bulk collection",
         reason: "mass surveillance",
         styleCSS: "font-weight: bold",
-        tags: ["security", "political"],
+        tags: ["security", "political", "data analytics"],
         link: "https://www.deutschlandfunk.de/dlf-interview-with-edward-snowden-what-would-a-society-be-100.html"
     },
     {
