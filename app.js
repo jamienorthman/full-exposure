@@ -215,7 +215,7 @@ let wordList = [ // the big list of words (euphemisms).
         word: "new media",
         reason: "touched by computers",
         styleCSS: "font-weight: bold",
-        tags: ["communication", "art"],
+        tags: ["communication", "art", "education"],
     }
 ];
 
