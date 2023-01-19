@@ -205,6 +205,18 @@ let wordList = [ // the big list of words (euphemisms).
         styleCSS: "font-weight: bold",
         tags: ["social", "politeness"],
     }
+    {
+        word: "University",
+        reason: "education center",
+        styleCSS: "font-weight: bold",
+        tags: ["education", "social"],
+    },
+    {
+        word: "new media",
+        reason: "touched by computers",
+        styleCSS: "font-weight: bold",
+        tags: ["communication", "art"],
+    }
 ];
 
 
