@@ -204,7 +204,7 @@ let wordList = [ // the big list of words (euphemisms).
         reason: "fire someone",
         styleCSS: "font-weight: bold",
         tags: ["social", "politeness"],
-    }
+    },
     {
         word: "University",
         reason: "education center",
