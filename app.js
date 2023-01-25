@@ -216,6 +216,12 @@ let wordList = [ // the big list of words (euphemisms).
         reason: "touched by computers",
         styleCSS: "font-weight: bold",
         tags: ["communication", "art", "education"],
+    },
+    {
+        word: "Between Jobs",
+        reason: "Unemployed",
+        styleCSS: "font-weight: bold",
+        tags: ["social", "politeness"],
     }
 ];
 
