@@ -222,6 +222,12 @@ let wordList = [ // the big list of words (euphemisms).
         reason: "Unemployed",
         styleCSS: "font-weight: bold",
         tags: ["social", "politeness"],
+    },
+    {
+        word: "nazism",
+        reason: "acting in accord or in sympathy with the former German fascist 'National Socialist' party.",
+        styleCSS: "font-weight: bold",
+        tags: ["political", "discrimination"],
     }
 ];
 
