@@ -185,6 +185,7 @@ let wordList = [ // the big list of words (euphemisms).
         reason: "website trackers",
         styleCSS: "font-weight: bold",
         tags: ["data analytics", "capitalism"], 
+        link: "impressum.html"
     },
     {
         word: "separate but equal",
