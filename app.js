@@ -312,7 +312,6 @@ for (let i = 0; i < wordList.length; i++) {
     });
 }
 
-
 // appendWidl("Utilize", "use!", "color:red")
 
 // appendWidl("Juxtapose", "compare and contrast?", "font-weight:bold")
