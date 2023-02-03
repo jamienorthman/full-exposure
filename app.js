@@ -185,7 +185,6 @@ let wordList = [ // the big list of words (euphemisms).
         reason: "website trackers",
         styleCSS: "font-weight: bold",
         tags: ["data analytics", "capitalism"], 
-        link: "impressum.html"
     },
     {
         word: "separate but equal",
@@ -229,6 +228,13 @@ let wordList = [ // the big list of words (euphemisms).
         reason: "acting in accord or in sympathy with the former German fascist 'National Socialist' party.",
         styleCSS: "font-weight: bold",
         tags: ["political", "discrimination"],
+    },
+    {
+        word: "Impressum",
+        reason: "forced exposure of sensitive data on the internet",
+        styleCSS: "font-weight: bold",
+        tags: ["data analytics", "communication"],
+        link: "impressum.html"
     }
 ];
 
