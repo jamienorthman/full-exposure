@@ -235,6 +235,12 @@ let wordList = [ // the big list of words (euphemisms).
         styleCSS: "font-weight: bold",
         tags: ["data analytics", "communication"],
         link: "impressum.html"
+    },
+    {
+        word: "credit score",
+        reason: "humans as numbers",
+        styleCSS: "font-weight: bold",
+        tags: ["data analytics", "capitalism"],
     }
 ];
 
