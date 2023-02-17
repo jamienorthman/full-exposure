@@ -241,6 +241,12 @@ let wordList = [ // the big list of words (euphemisms).
         reason: "humans as numbers",
         styleCSS: "font-weight: bold",
         tags: ["data analytics", "capitalism"],
+    },
+    {
+        word: "Family Planning",
+        reason: "Procreating",
+        styleCSS: "font-weight: bold",
+        tags: ["social", "politeness"],
     }
 ];
 
