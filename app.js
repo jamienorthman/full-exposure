@@ -230,8 +230,8 @@ let wordList = [ // the big list of words (euphemisms).
         tags: ["political", "discrimination"],
     },
     {
-        word: "Impressum",
-        reason: "forced exposure of sensitive data on the internet",
+        word: "Impressum (Imprint)",
+        reason: "forced exposure of sensitive data on the internet / taking responsibility for published media",
         styleCSS: "font-weight: bold",
         tags: ["data analytics", "communication"],
         link: "impressum.html"

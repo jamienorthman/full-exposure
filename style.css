@@ -96,6 +96,23 @@ a {
   text-decoration: underline;
 }
 
+footer {
+  bottom: 0;
+  width: 100%;
+}
+
+.about-imprint {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.msg-imprint {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
 @media (max-width: 1600px) {
   .title {
       font-size: 4em;
