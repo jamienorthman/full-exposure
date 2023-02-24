@@ -253,6 +253,18 @@ let wordList = [ // the big list of words (euphemisms).
         reason: "standard",
         styleCSS: "font-weight: bold",
         tags: ["mass media", "corporate"],
+    },
+    {
+        word: "issues",
+        reason: "emotional problems",
+        styleCSS: "font-weight: bold",
+        tags: ["mass media", "social"],
+    },
+    {
+        word: "Content Strategy",
+        reason: "Planning the subject matter to put on a website",
+        styleCSS: "font-weight: bold",
+        tags: ["mass media", "corporate", "capitalism"],
     }
 ];
 
