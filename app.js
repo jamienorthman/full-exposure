@@ -169,7 +169,7 @@ let wordList = [ // the big list of words (euphemisms).
         tags: ["violence", "racism", "discrimination"],
     },
     {
-        word: "sozial swach (socially weak)",
+        word: "sozial schwach (socially weak)",
         reason: "poor, little school education",
         styleCSS: "font-weight: bold",
         tags: ["mass media", "discrimination"],
@@ -265,6 +265,12 @@ let wordList = [ // the big list of words (euphemisms).
         reason: "Planning the subject matter to put on a website",
         styleCSS: "font-weight: bold",
         tags: ["mass media", "corporate", "capitalism"],
+    },
+    {
+        word: "online engagement",
+        reason: "likes and comments",
+        styleCSS: "font-weight: bold",
+        tags: ["communication", "capitalism", "corporate"]
     }
 ];
 
