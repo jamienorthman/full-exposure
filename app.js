@@ -268,9 +268,15 @@ let wordList = [ // the big list of words (euphemisms).
     },
     {
         word: "online engagement",
-        reason: "likes and comments",
+        reason: "clicks, likes, and comments",
         styleCSS: "font-weight: bold",
         tags: ["communication", "capitalism", "corporate"]
+    },
+    {
+        word: "Gefallener (Fallen)",
+        reason: "Killed Soldier",
+        styleCSS: "font-weight: bold",
+        tags: ["war", "political"]
     }
 ];
 
