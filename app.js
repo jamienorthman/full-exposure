@@ -277,6 +277,12 @@ let wordList = [ // the big list of words (euphemisms).
         reason: "Killed Soldier",
         styleCSS: "font-weight: bold",
         tags: ["war", "political"]
+    },
+    {
+        word: "Ehrenrunde drehen (a lap of honor)",
+        reason: "repeating a grade/class in school",
+        styleCSS: "font-weight: bold",
+        tags: ["education", "social"]
     }
 ];
 
