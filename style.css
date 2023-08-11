@@ -96,6 +96,11 @@ a {
   text-decoration: underline;
 }
 
+span:hover,
+a:hover {
+  color: limegreen;
+}
+
 footer {
   bottom: 0;
   width: 100%;

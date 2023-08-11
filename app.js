@@ -1,309 +1,21 @@
+import { wordList } from '/data.js'
 
-//later: use JSON to define the words list
+const containerDiv = document.getElementById("word-container");
 
-let wordList = [ // the big list of words (euphemisms).
-    {
-        word: "extraordinary rendition",
-        reason: "kidnapping",
-        styleCSS: "font-weight: bold",
-        tags: ["political", "war"],
-        link: ""
-    },
-    {
-        word: "bulk collection",
-        reason: "mass surveillance",
-        styleCSS: "font-weight: bold",
-        tags: ["security", "political", "data analytics"],
-        link: "https://www.deutschlandfunk.de/dlf-interview-with-edward-snowden-what-would-a-society-be-100.html"
-    },
-    {
-        word: "enhanced interogation",
-        reason: "torture",
-        styleCSS: "font-weight: bold",
-        tags: ["political", "war"],
-        link: ""
-    },
-    {
-        word: "footfall measurement",
-        reason: "location tracking",
-        styleCSS: "font-weight: bold",
-        tags: ["capitalism", "data analytics"],
-        link: "https://vimeo.com/425137575"
-    },
-    {
-        word: "Psychographic breakdown",
-        reason: "personality labeling",
-        styleCSS: "font-weight: bold",
-        tags: ["capitalism", "data analytics"],
-        link: "https://vimeo.com/425137575"
-    },
-    {
-        word: "collateral damage",
-        reason: "massive civilian destruction during war",
-        styleCSS: "font-weight: bold",
-        tags: ["war", "mass media"],
-        link: "https://vimeo.com/425137575"
-    },
-    {
-        word: "casualties",
-        reason: "deaths",
-        styleCSS: "font-weight: bold",
-        tags: ["war", "mass media"],
-        link: ""
-    },
-    {
-        word: "counterintelligence",
-        reason: "defense against spying",
-        styleCSS: "font-weight: bold",
-        tags: ["security", "political"],
-        link: ""
-    },
-    {
-        word: "outsourcing",
-        reason: "whoever does it cheapest gets the job",
-        styleCSS: "font-weight: bold",
-        tags: ["capitalism", "labor"],
-        link: ""
-    },
-    {
-        word: "social distancing",
-        reason: "physical distancing",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "pandemic"],
-        link: ""
-    },
-    {
-        word: "front line",
-        reason: "military line closest to enemy or influential position in a debate",
-        styleCSS: "font-weight: bold",
-        tags: ["war", "pandemic"],
-        link: ""
-    },
-    {
-        word: "Pushback",
-        reason: "forcing refugees or migrants back over a border",
-        styleCSS: "font-weight: bold",
-        tags: ["geopolitical", "migration"],
-        link: ""
-    },
-    {
-        word: "downsizing",
-        reason: "layoffs",
-        styleCSS: "font-weight: bold",
-        tags: ["capitalism", "labor"],
-        link: ""
-    },
-    {
-        word: "subprime loan",
-        reason: "impossible to pay back",
-        styleCSS: "font-weight: bold",
-        tags: ["capitalism", "finance"],
-        link: ""
-    },
-    {
-        word: "ethnic cleansing",
-        reason: "forced ethnic homogeny",
-        styleCSS: "font-weight: bold",
-        tags: ["racism", "migration", "genocide"],
-        link: ""
-    },
-    {
-        word: "over the hill",
-        reason: "old",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "slang" ],
-        link: ""
-    },
-    {
-        word: "hook-up",
-        reason: "have sex",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "slang"],
-        link: ""
-    },
-    {
-        word: "put down",
-        reason: "euthanize (an animal)",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "politeness"],
-        link: ""
-    },
-    {
-        word: "without right to correspondence",
-        reason: "immediately sentenced to death",
-        styleCSS: "font-weight: bold",
-        tags: ["murder", "war", "political"],
-        link: "https://jsis.washington.edu/wordpress/wp-content/uploads/2018/02/USSR_Stalin_Great_Purge.pdf"
-    },
-    {
-        word: "Falsos positivos (False positives)",
-        reason: "structural assassination of civilians by military to inflate body counts",
-        styleCSS: "font-weight: bold",
-        tags: ["violence", "political"],
-        link: "https://www.hrw.org/es/news/2017/11/11/los-incentivos-perversos-detras-de-los-falsos-positivos"
-    },
-    {
-        word: "Sozialtourismus (Social tourism)",
-        reason: "Flight of Ukrainians",
-        styleCSS: "font-weight: bold",
-        tags: ["migration", "political"],
-        link: "https://www.tagesschau.de/inland/merz-ukraine-fluechtlinge-deutschland-101.html"
-    },
-    {
-        word: "Sondervermögen (Special assets)",
-        reason: "debt",
-        styleCSS: "font-weight: bold",
-        tags: ["political", "finance"],
-        link: "https://www.tagesschau.de/wirtschaft/finanzen/staatshaushalt-sondervermoegen-101.html"
-    },
-    {
-        word: "konsolidieren (consolidate)",
-        reason: "nothing done yet",
-        styleCSS: "font-weight: bold",
-        tags: ["political", "mass media"],
-    },
-    {
-        word: "Reichskristallnacht (Crystal Night)",
-        reason: "November Progroms 1938",
-        styleCSS: "font-weight: bold",
-        tags: ["violence", "racism", "discrimination"],
-    },
-    {
-        word: "sozial schwach (socially weak)",
-        reason: "poor, little school education",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "discrimination"],
-    },
-    {
-        word: "the Final Solution",
-        reason: "mass murder of European Jews by Nazi Germany",
-        styleCSS: "font-weight: bold",
-        tags: ["murder", "discrimination", "racism"], 
-    },
-    {
-        word: "cookies",
-        reason: "website trackers",
-        styleCSS: "font-weight: bold",
-        tags: ["data analytics", "capitalism"], 
-    },
-    {
-        word: "separate but equal",
-        reason: "segregated and not equal",
-        styleCSS: "font-weight: bold",
-        tags: ["discrimination", "racism"], 
-        link: "https://www.law.cornell.edu/wex/separate_but_equal#:~:text=%E2%80%9CSeparate%20but%20equal%E2%80%9D%20refers%20to,by%20states%20and%20local%20governments."
-    },
-    {
-        word: "liquidation",
-        reason: "clearing out, killing, or disposing of",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "murder"],
-    },
-    {
-        word: "let go",
-        reason: "fire someone",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "politeness"],
-    },
-    {
-        word: "University",
-        reason: "education center",
-        styleCSS: "font-weight: bold",
-        tags: ["education", "social"],
-    },
-    {
-        word: "new media",
-        reason: "touched by computers",
-        styleCSS: "font-weight: bold",
-        tags: ["communication", "art", "education"],
-    },
-    {
-        word: "Between Jobs",
-        reason: "Unemployed",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "politeness"],
-    },
-    {
-        word: "nazism",
-        reason: "acting in accord or in sympathy with the former German fascist 'National Socialist' party.",
-        styleCSS: "font-weight: bold",
-        tags: ["political", "discrimination"],
-    },
-    {
-        word: "Impressum (Imprint)",
-        reason: "forced exposure of sensitive data on the internet / taking responsibility for published media",
-        styleCSS: "font-weight: bold",
-        tags: ["data analytics", "communication"],
-        link: "impressum.html"
-    },
-    {
-        word: "credit score",
-        reason: "humans as numbers",
-        styleCSS: "font-weight: bold",
-        tags: ["data analytics", "capitalism"],
-    },
-    {
-        word: "Family Planning",
-        reason: "Procreating",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "politeness"],
-    },
-    {
-        word: "best practices",
-        reason: "standard",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "corporate"],
-    },
-    {
-        word: "issues",
-        reason: "emotional problems",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "social"],
-    },
-    {
-        word: "Content Strategy",
-        reason: "Planning the subject matter to put on a website",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "corporate", "capitalism"],
-    },
-    {
-        word: "online engagement",
-        reason: "clicks, likes, and comments",
-        styleCSS: "font-weight: bold",
-        tags: ["communication", "capitalism", "corporate"]
-    },
-    {
-        word: "Gefallener (Fallen)",
-        reason: "Killed Soldier",
-        styleCSS: "font-weight: bold",
-        tags: ["war", "political"]
-    },
-    {
-        word: "Ehrenrunde drehen (a lap of honor)",
-        reason: "repeating a grade/class in school",
-        styleCSS: "font-weight: bold",
-        tags: ["education", "social"]
-    }
-];
+let wordElement;
+function renderWords(wordListEntry) {
+   
 
-
-
-console.log("CREATING ELEMENTS!")
-
-
-function appendWidl(wordListEntry) {
-    let containerDiv = document.getElementById("word-container");
-
-    let widlDiv = document.createElement("div"); // HTML element: these divs hold each word (euphemism). It contains two things: wordElement and toolTipSpan.
+    const widlDiv = document.createElement("div"); // HTML element: these divs hold each word (euphemism). It contains two things: wordElement and toolTipSpan.
     widlDiv.classList.add("tooltip"); // tooltip class is added from style.css file
 
-    let wordElement; // the HTML elements representing the characteristics of the wordListEntries.
+     // the HTML elements representing the characteristics of the wordListEntries.
     if (wordListEntry.link) { // wordListEntry refers to the actual contents of wordList (the objects inside array wordList).
         wordElement = document.createElement("a"); // creates a link element for wordElement...
         wordElement.href = wordListEntry.link; // ...attaches the link element to wordListEntry
-        wordElement.target = "_blank" 
+        wordElement.target = "_blank" //opens link in another tab
     } else {
-        wordElement = document.createElement("span"); // one of the spans with no link inside the WidlDiv
+        wordElement = document.createElement("span"); // words with no link inside WidlDiv
     }
     wordElement.style = wordListEntry.styleCSS;
     let toolTipSpan = document.createElement("span"); // toolTipSpan created to see tooltip in the HTML.
@@ -313,59 +25,94 @@ function appendWidl(wordListEntry) {
     widlDiv.appendChild(wordElement); // attaches wordElement
     widlDiv.appendChild(toolTipSpan); // attaches toolTipSpan
 
-    wordElement.innerText = wordListEntry.word; // now the euphemism will be displayed.
-    toolTipSpan.innerText = wordListEntry.reason; // and the tooltip feature containing the translation of the euphemism.
+    wordElement.innerText = wordListEntry.word; // euphemism will be displayed.
+    toolTipSpan.innerText = wordListEntry.reason; // and tooltip feature with translation of the euphemism.
 
     containerDiv.appendChild(widlDiv)
     // Now all the HTML for this word has been created.
-    // In addition, store a reference for each word element in the JS wordList so that we 
+    // store reference for each word element in wordList so that we 
     // can access each word's HTML whenever we need it: (For example, in addEventListener.)
     wordListEntry.wordElementHTML = wordElement; 
 }
-// This loop creates the HTML divs and attaches a reference to each word's html element 
-// to the word list entries. It calls the appendWidl function above.
+// Creates HTML divs and attaches reference to each word's html element 
+// to the word list entries. calls the appendWidl function above.
 for (let i = 0; i < wordList.length; i++) {
-    appendWidl(wordList[i]); 
+    renderWords(wordList[i]); 
+} 
+
+wordElement.addEventListener('mouseover', highlightSelectedWord)
+
+wordElement.addEventListener('mouseover', getRelatedWordsArray)
+
+wordElement.addEventListener('mouseout', () => {
+    wordElement.style.color = 'rgb(187, 175, 175)'
+})
+
+function highlightSelectedWord(e) {
+    const hoveredWord = wordElement.classList.add('span:hover')
+    return hoveredWord
 }
-// Next loop goes through each wordListEntry of the wordList...
-for (let i = 0; i < wordList.length; i++) {
-    let wordListEntry = wordList[i];
-    let relatedWords = []; // ...initializes the variable. to be filled up later.
-    // For each tag of this word...
-    for (let j = 0; j < wordListEntry.tags.length; j++) {
-        let wordTag = wordListEntry.tags[j];
-        // ...search all other words...
-        for (let k = 0; k < wordList.length; k++) {
-            let otherWordListEntry = wordList[k];
-            // ...to compare their tags with the given tag of this word:
-            for (let l = 0; l < otherWordListEntry.tags.length; l++) {
-                let otherWordTag = otherWordListEntry.tags[l];
-                // If the words are sharing at least 1 tag we consider them related.
-                if (wordTag === otherWordTag) {
-                    relatedWords.push(otherWordListEntry);
-                    break;
-                } // ** Could use array.includes() in the future ? **
-            }
-        }          
+
+// This function finds matching tags of other words when user hovers over one word
+function getRelatedWordsArray() {
+    const selectedWord = wordList.word
+    const relatedWordsArray = wordList.filter(function(word) {
+        return word.tags.includes(selectedWord)
+    })
+        console.log(relatedWordsArray)
+}
+        
+
+
+
+
+/*function getTagsArray(words) {
+    const tagsArray = []
+    for (let word of words) {
+        for (let tag of word.tags) {
+            tagsArray.push(tag)
+        }
     }
-    let wordHtml = wordListEntry.wordElementHTML;
-    // Highlight Event:
-    wordHtml.addEventListener("mouseover", (event) => {
-        for (let j = 0; j < relatedWords.length; j++) {
-            // this is why we needed to store wordElementHTML. 
-            // Because here we're manipulating DOM.
-            relatedWords[j].wordElementHTML.style.color = 'limeGreen';
-        }
-    });
-    // Unhighlight Event:
-    wordHtml.addEventListener("mouseout", (event) => {
-        for (let j = 0; j < relatedWords.length; j++) {
-            // this is why we needed to store wordElementHTML. 
-            //Because here we're manipulating DOM.
-            relatedWords[j].wordElementHTML.style.color = 'rgb(187, 175, 175)';
-        }
-    });
-}
+    return tagsArray
+} */
+
+//let relatedWords = []; // ...initializes the variable. to be filled up later.
+// Next loop goes through each wordListEntry of the wordList...
+//for (let wordListEntry of wordList) {
+ // For each tag of this word...
+    //for (let tag of wordListEntry.tags) {
+        //let wordTag = wordList.tags(tag);
+        // ...search all other words...
+        //for (let otherWordListEntry of wordList) {
+            // ...to compare their tags with the given tag of this word:
+            //for (let tag of otherWordListEntry.tags) {
+                //let otherWordTag = otherWordListEntry.tags(tag);
+                // If the words are sharing at least 1 tag we consider them related.
+                //if (wordTag === otherWordTag) {
+                    //relatedWords.push(otherWordListEntry);
+                    //break;
+                //} // ** Could use array.includes() in the future ? **
+            //}
+        //}          
+    //}
+//const wordHtml = wordListEntry.wordElementHTML;
+// Highlight Event:
+//selectedWord.addEventListener("mouseover", getMatchingWordsArray) => {
+    //for (let relatedWord of relatedWords) {
+        // this is why we needed to store wordElementHTML. 
+        // Because here we're manipulating DOM.
+        //relatedWord.wordElementHTML.style.color = 'limeGreen';
+    //}
+//});
+// Unhighlight Event:
+//selectedWord.addEventListener("mouseout", (event) => {
+    //for (let relatedWord of relatedWords) {
+        // this is why we needed to store wordElementHTML. 
+        //Because here we're manipulating DOM.
+        //relatedWord.wordElementHTML.style.color = 'rgb(187, 175, 175)';
+    //}
+//});
+
 
 // appendWidl("Utilize", "use!", "color:red")
 
