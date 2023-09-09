@@ -96,6 +96,10 @@ a {
   text-decoration: underline;
 }
 
+.highlight {
+  color: limegreen;
+}
+
 footer {
   bottom: 0;
   width: 100%;

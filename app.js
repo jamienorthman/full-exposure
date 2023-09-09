@@ -1,309 +1,21 @@
+import { wordList } from '/data.js'
 
-//later: use JSON to define the words list
-
-let wordList = [ // the big list of words (euphemisms).
-    {
-        word: "extraordinary rendition",
-        reason: "kidnapping",
-        styleCSS: "font-weight: bold",
-        tags: ["political", "war"],
-        link: ""
-    },
-    {
-        word: "bulk collection",
-        reason: "mass surveillance",
-        styleCSS: "font-weight: bold",
-        tags: ["security", "political", "data analytics"],
-        link: "https://www.deutschlandfunk.de/dlf-interview-with-edward-snowden-what-would-a-society-be-100.html"
-    },
-    {
-        word: "enhanced interogation",
-        reason: "torture",
-        styleCSS: "font-weight: bold",
-        tags: ["political", "war"],
-        link: ""
-    },
-    {
-        word: "footfall measurement",
-        reason: "location tracking",
-        styleCSS: "font-weight: bold",
-        tags: ["capitalism", "data analytics"],
-        link: "https://vimeo.com/425137575"
-    },
-    {
-        word: "Psychographic breakdown",
-        reason: "personality labeling",
-        styleCSS: "font-weight: bold",
-        tags: ["capitalism", "data analytics"],
-        link: "https://vimeo.com/425137575"
-    },
-    {
-        word: "collateral damage",
-        reason: "massive civilian destruction during war",
-        styleCSS: "font-weight: bold",
-        tags: ["war", "mass media"],
-        link: "https://vimeo.com/425137575"
-    },
-    {
-        word: "casualties",
-        reason: "deaths",
-        styleCSS: "font-weight: bold",
-        tags: ["war", "mass media"],
-        link: ""
-    },
-    {
-        word: "counterintelligence",
-        reason: "defense against spying",
-        styleCSS: "font-weight: bold",
-        tags: ["security", "political"],
-        link: ""
-    },
-    {
-        word: "outsourcing",
-        reason: "whoever does it cheapest gets the job",
-        styleCSS: "font-weight: bold",
-        tags: ["capitalism", "labor"],
-        link: ""
-    },
-    {
-        word: "social distancing",
-        reason: "physical distancing",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "pandemic"],
-        link: ""
-    },
-    {
-        word: "front line",
-        reason: "military line closest to enemy or influential position in a debate",
-        styleCSS: "font-weight: bold",
-        tags: ["war", "pandemic"],
-        link: ""
-    },
-    {
-        word: "Pushback",
-        reason: "forcing refugees or migrants back over a border",
-        styleCSS: "font-weight: bold",
-        tags: ["geopolitical", "migration"],
-        link: ""
-    },
-    {
-        word: "downsizing",
-        reason: "layoffs",
-        styleCSS: "font-weight: bold",
-        tags: ["capitalism", "labor"],
-        link: ""
-    },
-    {
-        word: "subprime loan",
-        reason: "impossible to pay back",
-        styleCSS: "font-weight: bold",
-        tags: ["capitalism", "finance"],
-        link: ""
-    },
-    {
-        word: "ethnic cleansing",
-        reason: "forced ethnic homogeny",
-        styleCSS: "font-weight: bold",
-        tags: ["racism", "migration", "genocide"],
-        link: ""
-    },
-    {
-        word: "over the hill",
-        reason: "old",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "slang" ],
-        link: ""
-    },
-    {
-        word: "hook-up",
-        reason: "have sex",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "slang"],
-        link: ""
-    },
-    {
-        word: "put down",
-        reason: "euthanize (an animal)",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "politeness"],
-        link: ""
-    },
-    {
-        word: "without right to correspondence",
-        reason: "immediately sentenced to death",
-        styleCSS: "font-weight: bold",
-        tags: ["murder", "war", "political"],
-        link: "https://jsis.washington.edu/wordpress/wp-content/uploads/2018/02/USSR_Stalin_Great_Purge.pdf"
-    },
-    {
-        word: "Falsos positivos (False positives)",
-        reason: "structural assassination of civilians by military to inflate body counts",
-        styleCSS: "font-weight: bold",
-        tags: ["violence", "political"],
-        link: "https://www.hrw.org/es/news/2017/11/11/los-incentivos-perversos-detras-de-los-falsos-positivos"
-    },
-    {
-        word: "Sozialtourismus (Social tourism)",
-        reason: "Flight of Ukrainians",
-        styleCSS: "font-weight: bold",
-        tags: ["migration", "political"],
-        link: "https://www.tagesschau.de/inland/merz-ukraine-fluechtlinge-deutschland-101.html"
-    },
-    {
-        word: "Sondervermögen (Special assets)",
-        reason: "debt",
-        styleCSS: "font-weight: bold",
-        tags: ["political", "finance"],
-        link: "https://www.tagesschau.de/wirtschaft/finanzen/staatshaushalt-sondervermoegen-101.html"
-    },
-    {
-        word: "konsolidieren (consolidate)",
-        reason: "nothing done yet",
-        styleCSS: "font-weight: bold",
-        tags: ["political", "mass media"],
-    },
-    {
-        word: "Reichskristallnacht (Crystal Night)",
-        reason: "November Progroms 1938",
-        styleCSS: "font-weight: bold",
-        tags: ["violence", "racism", "discrimination"],
-    },
-    {
-        word: "sozial schwach (socially weak)",
-        reason: "poor, little school education",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "discrimination"],
-    },
-    {
-        word: "the Final Solution",
-        reason: "mass murder of European Jews by Nazi Germany",
-        styleCSS: "font-weight: bold",
-        tags: ["murder", "discrimination", "racism"], 
-    },
-    {
-        word: "cookies",
-        reason: "website trackers",
-        styleCSS: "font-weight: bold",
-        tags: ["data analytics", "capitalism"], 
-    },
-    {
-        word: "separate but equal",
-        reason: "segregated and not equal",
-        styleCSS: "font-weight: bold",
-        tags: ["discrimination", "racism"], 
-        link: "https://www.law.cornell.edu/wex/separate_but_equal#:~:text=%E2%80%9CSeparate%20but%20equal%E2%80%9D%20refers%20to,by%20states%20and%20local%20governments."
-    },
-    {
-        word: "liquidation",
-        reason: "clearing out, killing, or disposing of",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "murder"],
-    },
-    {
-        word: "let go",
-        reason: "fire someone",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "politeness"],
-    },
-    {
-        word: "University",
-        reason: "education center",
-        styleCSS: "font-weight: bold",
-        tags: ["education", "social"],
-    },
-    {
-        word: "new media",
-        reason: "touched by computers",
-        styleCSS: "font-weight: bold",
-        tags: ["communication", "art", "education"],
-    },
-    {
-        word: "Between Jobs",
-        reason: "Unemployed",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "politeness"],
-    },
-    {
-        word: "nazism",
-        reason: "acting in accord or in sympathy with the former German fascist 'National Socialist' party.",
-        styleCSS: "font-weight: bold",
-        tags: ["political", "discrimination"],
-    },
-    {
-        word: "Impressum (Imprint)",
-        reason: "forced exposure of sensitive data on the internet / taking responsibility for published media",
-        styleCSS: "font-weight: bold",
-        tags: ["data analytics", "communication"],
-        link: "impressum.html"
-    },
-    {
-        word: "credit score",
-        reason: "humans as numbers",
-        styleCSS: "font-weight: bold",
-        tags: ["data analytics", "capitalism"],
-    },
-    {
-        word: "Family Planning",
-        reason: "Procreating",
-        styleCSS: "font-weight: bold",
-        tags: ["social", "politeness"],
-    },
-    {
-        word: "best practices",
-        reason: "standard",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "corporate"],
-    },
-    {
-        word: "issues",
-        reason: "emotional problems",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "social"],
-    },
-    {
-        word: "Content Strategy",
-        reason: "Planning the subject matter to put on a website",
-        styleCSS: "font-weight: bold",
-        tags: ["mass media", "corporate", "capitalism"],
-    },
-    {
-        word: "online engagement",
-        reason: "clicks, likes, and comments",
-        styleCSS: "font-weight: bold",
-        tags: ["communication", "capitalism", "corporate"]
-    },
-    {
-        word: "Gefallener (Fallen)",
-        reason: "Killed Soldier",
-        styleCSS: "font-weight: bold",
-        tags: ["war", "political"]
-    },
-    {
-        word: "Ehrenrunde drehen (a lap of honor)",
-        reason: "repeating a grade/class in school",
-        styleCSS: "font-weight: bold",
-        tags: ["education", "social"]
-    }
-];
+const containerDiv = document.getElementById("word-container");
 
 
+function renderWord(wordListEntry) {
+    let wordElement;
 
-console.log("CREATING ELEMENTS!")
-
-
-function appendWidl(wordListEntry) {
-    let containerDiv = document.getElementById("word-container");
-
-    let widlDiv = document.createElement("div"); // HTML element: these divs hold each word (euphemism). It contains two things: wordElement and toolTipSpan.
+    const widlDiv = document.createElement("div"); // HTML element: these divs hold each word (euphemism). It contains two things: wordElement and toolTipSpan.
     widlDiv.classList.add("tooltip"); // tooltip class is added from style.css file
 
-    let wordElement; // the HTML elements representing the characteristics of the wordListEntries.
+     // the HTML elements representing the characteristics of the wordListEntries.
     if (wordListEntry.link) { // wordListEntry refers to the actual contents of wordList (the objects inside array wordList).
         wordElement = document.createElement("a"); // creates a link element for wordElement...
         wordElement.href = wordListEntry.link; // ...attaches the link element to wordListEntry
-        wordElement.target = "_blank" 
+        wordElement.target = "_blank" //opens link in another tab
     } else {
-        wordElement = document.createElement("span"); // one of the spans with no link inside the WidlDiv
+        wordElement = document.createElement("span"); // words with no link inside WidlDiv
     }
     wordElement.style = wordListEntry.styleCSS;
     let toolTipSpan = document.createElement("span"); // toolTipSpan created to see tooltip in the HTML.
@@ -313,119 +25,56 @@ function appendWidl(wordListEntry) {
     widlDiv.appendChild(wordElement); // attaches wordElement
     widlDiv.appendChild(toolTipSpan); // attaches toolTipSpan
 
-    wordElement.innerText = wordListEntry.word; // now the euphemism will be displayed.
-    toolTipSpan.innerText = wordListEntry.reason; // and the tooltip feature containing the translation of the euphemism.
+    wordElement.innerText = wordListEntry.word; // euphemism will be displayed.
+    toolTipSpan.innerText = wordListEntry.reason; // and tooltip feature with translation of the euphemism.
 
     containerDiv.appendChild(widlDiv)
+
     // Now all the HTML for this word has been created.
-    // In addition, store a reference for each word element in the JS wordList so that we 
+    // store reference for each word element in wordList so that we 
     // can access each word's HTML whenever we need it: (For example, in addEventListener.)
+    // (each word has an HTML buddy, so wordElementHTML is a new key added to each object)
     wordListEntry.wordElementHTML = wordElement; 
 }
-// This loop creates the HTML divs and attaches a reference to each word's html element 
-// to the word list entries. It calls the appendWidl function above.
-for (let i = 0; i < wordList.length; i++) {
-    appendWidl(wordList[i]); 
-}
-// Next loop goes through each wordListEntry of the wordList...
-for (let i = 0; i < wordList.length; i++) {
-    let wordListEntry = wordList[i];
-    let relatedWords = []; // ...initializes the variable. to be filled up later.
-    // For each tag of this word...
-    for (let j = 0; j < wordListEntry.tags.length; j++) {
-        let wordTag = wordListEntry.tags[j];
-        // ...search all other words...
-        for (let k = 0; k < wordList.length; k++) {
-            let otherWordListEntry = wordList[k];
-            // ...to compare their tags with the given tag of this word:
-            for (let l = 0; l < otherWordListEntry.tags.length; l++) {
-                let otherWordTag = otherWordListEntry.tags[l];
-                // If the words are sharing at least 1 tag we consider them related.
-                if (wordTag === otherWordTag) {
-                    relatedWords.push(otherWordListEntry);
-                    break;
-                } // ** Could use array.includes() in the future ? **
+
+// finds words that are related to selected word and highlights or
+// unhighlights them based on matching tags:
+function updateMatchingWords(wordEntry, shouldHighlight) {
+    for (let otherWordEntry of wordList) {
+
+        const tags1 = wordEntry.tags
+        const tags2 = otherWordEntry.tags
+
+        if (tags1.some(tag => tags2.includes(tag))) {
+            // highlight or unhighlight the matching word element
+            let cL = otherWordEntry.wordElementHTML.classList
+            if (shouldHighlight)
+            {
+                cL.add('highlight')
             }
-        }          
+            else
+            {
+                cL.remove('highlight')
+            }
+        }
     }
-    let wordHtml = wordListEntry.wordElementHTML;
-    // Highlight Event:
-    wordHtml.addEventListener("mouseover", (event) => {
-        for (let j = 0; j < relatedWords.length; j++) {
-            // this is why we needed to store wordElementHTML. 
-            // Because here we're manipulating DOM.
-            relatedWords[j].wordElementHTML.style.color = 'limeGreen';
-        }
-    });
-    // Unhighlight Event:
-    wordHtml.addEventListener("mouseout", (event) => {
-        for (let j = 0; j < relatedWords.length; j++) {
-            // this is why we needed to store wordElementHTML. 
-            //Because here we're manipulating DOM.
-            relatedWords[j].wordElementHTML.style.color = 'rgb(187, 175, 175)';
-        }
-    });
 }
+   
+// Creates HTML divs and attaches reference to each word's html element 
+// to the word list entries.
+for (let wordEntry of wordList) {
+    renderWord(wordEntry); 
+} 
 
-// appendWidl("Utilize", "use!", "color:red")
+// provides interactive state by showing highlighted words
+// for given word element adds and removes highlighted state:
+for (let wordEntry of wordList) {
 
-// appendWidl("Juxtapose", "compare and contrast?", "font-weight:bold")
+    wordEntry.wordElementHTML.addEventListener('mouseout', () => {
+        updateMatchingWords(wordEntry, false)
+    })
 
-/* appendWidl("Bulk collection", "mass surveillance", "font-weight:bold;", "https://www.deutschlandfunk.de/dlf-interview-with-edward-snowden-what-would-a-society-be-100.html")
-
-// appendWidl("conjouring", "produce or evoke", "color:gold; font-size:200%;")
-
-// appendWidl("Meandering", "weaving or move through?", "font-style:italic")
-
-appendWidl("extraordinary rendition", "kidnapping", "font-weight:bold")
-
-appendWidl("enhanced interrogation", "torture", "font-weight:bold")
-
-// appendWidl("vignettes", "snapshots?", "font-style:italic")
-
-// appendWidl("methodologies", "methods")
-
-// appendWidl("intermediaries", "mediator", "color:green")
-
-// appendWidl("individuating", "-__-", "font-weight:bold")
-
-appendWidl("Footfall measurement", "location tracking", "font-weight:bold;", "https://vimeo.com/425137575")
-
-appendWidl("Psychographic breakdown", "personality labeling", "font-weight:bold;", "https://vimeo.com/425137575")
-
-// appendWidl("focalize", "just say focus", "font-weight:bold")
-
-appendWidl("collateral damage", "massive civilian destruction during war", "font-weight:bold;")
-
-// appendWidl("Change-management", "can really manage change?!", "font-style:italic")
-
-// appendWidl("Sustainability", "long-term practices—nowadays used to gain profits", "font-size:200%; color:green;")
-
-// appendWidl("trajectory", "path")
-
-appendWidl("casualties", "deaths", "font-weight:bold;")
-
-// appendWidl("inflection point", "turning point/milestone", "font-style:italic")
-
-appendWidl("counterintelligence", "defense against spying", "font-weight:bold;")
-
-appendWidl("outsourcing", "whoever does it cheapest gets the job", "font-weight:bold;")
-
-// appendWidl("Posthuman", "evolution")
-
-// appendWidl("useless", "no need to be useful", "font-weight:bold;")
-
-// appendWidl("Apropos", "relevant", "font-style:italic; color:green;")
-
-appendWidl("social distancing", "physical distancing", "font-weight:bold;")
-
-appendWidl("front line", "military line closest to enemy or influential position in a debate", "font-weight:bold;")
-
-appendWidl("Pushback", "forcing refugees or migrants back over a border", "font-weight:bold;")
-
-appendWidl("downsizing", "layoffs", "font-weight:bold;")
-
-appendWidl("subprime loan", "impossible to pay back", "font-weight:bold;")
-
-appendWidl("ethnic cleansing", "forced ethnic homogeny", "font-weight:bold;") */
-
+    wordEntry.wordElementHTML.addEventListener('mouseover', () => {
+        updateMatchingWords(wordEntry, true)
+    })
+} 
