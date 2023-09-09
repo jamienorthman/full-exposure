@@ -2,9 +2,9 @@ import { wordList } from '/data.js'
 
 const containerDiv = document.getElementById("word-container");
 
-let wordElement;
-function renderWords(wordListEntry) {
-   
+
+function renderWord(wordListEntry) {
+    let wordElement;
 
     const widlDiv = document.createElement("div"); // HTML element: these divs hold each word (euphemism). It contains two things: wordElement and toolTipSpan.
     widlDiv.classList.add("tooltip"); // tooltip class is added from style.css file
@@ -29,39 +29,57 @@ function renderWords(wordListEntry) {
     toolTipSpan.innerText = wordListEntry.reason; // and tooltip feature with translation of the euphemism.
 
     containerDiv.appendChild(widlDiv)
+
     // Now all the HTML for this word has been created.
     // store reference for each word element in wordList so that we 
     // can access each word's HTML whenever we need it: (For example, in addEventListener.)
+    // (each word has an HTML buddy, so wordElementHTML is a new key added to each object)
     wordListEntry.wordElementHTML = wordElement; 
 }
+
+// finds words that are related to selected word and highlights or
+// unhighlights them based on matching tags:
+function updateMatchingWords(wordEntry, shouldHighlight) {
+    for (let otherWordEntry of wordList) {
+
+        const tags1 = wordEntry.tags
+        const tags2 = otherWordEntry.tags
+
+        if (tags1.some(tag => tags2.includes(tag))) {
+            // highlight or unhighlight the matching word element
+            let cL = otherWordEntry.wordElementHTML.classList
+            if (shouldHighlight)
+            {
+                cL.add('highlight')
+            }
+            else
+            {
+                cL.remove('highlight')
+            }
+        }
+    }
+}
+   
 // Creates HTML divs and attaches reference to each word's html element 
-// to the word list entries. calls the appendWidl function above.
-for (let i = 0; i < wordList.length; i++) {
-    renderWords(wordList[i]); 
+// to the word list entries.
+for (let wordEntry of wordList) {
+    renderWord(wordEntry); 
 } 
 
-wordElement.addEventListener('mouseover', highlightSelectedWord)
+// provides interactive state by showing highlighted words
+// for given word element adds and removes highlighted state:
+for (let wordEntry of wordList) {
 
-wordElement.addEventListener('mouseover', getRelatedWordsArray)
-
-wordElement.addEventListener('mouseout', () => {
-    wordElement.style.color = 'rgb(187, 175, 175)'
-})
-
-function highlightSelectedWord(e) {
-    const hoveredWord = wordElement.classList.add('span:hover')
-    return hoveredWord
-}
-
-// This function finds matching tags of other words when user hovers over one word
-function getRelatedWordsArray() {
-    const selectedWord = wordList.word
-    const relatedWordsArray = wordList.filter(function(word) {
-        return word.tags.includes(selectedWord)
+    wordEntry.wordElementHTML.addEventListener('mouseout', () => {
+        updateMatchingWords(wordEntry, false)
     })
-        console.log(relatedWordsArray)
-}
-        
+
+    wordEntry.wordElementHTML.addEventListener('mouseover', () => {
+        updateMatchingWords(wordEntry, true)
+    })
+} 
+
+
 
 
 

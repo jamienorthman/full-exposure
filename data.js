@@ -1,5 +1,3 @@
-//later: use JSON to define the words list
-
 export const wordList = [ // the big list of words (euphemisms).
     {
         word: "extraordinary rendition",

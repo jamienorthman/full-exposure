@@ -96,8 +96,7 @@ a {
   text-decoration: underline;
 }
 
-span:hover,
-a:hover {
+.highlight {
   color: limegreen;
 }
 
