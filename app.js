@@ -1,4 +1,4 @@
-import { wordList } from '/data.js'
+import { wordList } from './data.js'
 
 const containerDiv = document.getElementById("word-container");
 
